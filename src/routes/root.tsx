@@ -1,3 +1,5 @@
+import { Outlet } from "react-router-dom";
+
 export default function Root() {
     return (
       <>
@@ -29,15 +31,17 @@ export default function Root() {
           <nav>
             <ul>
               <li>
-                <a href={`/contacts/1`}>Your Name</a>
+                <a href={`/001-profile-card`}>Profile Card</a>
               </li>
               <li>
-                <a href={`/contacts/2`}>Your Friend</a>
+                <a href={`/contacts/2`}>Add to bag</a>
               </li>
             </ul>
           </nav>
         </div>
-        <div id="detail"></div>
+        <div id="detail" className="w-full h-full">
+          <Outlet />
+        </div>
       </>
     );
   }
