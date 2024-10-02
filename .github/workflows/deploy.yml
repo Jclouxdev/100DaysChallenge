@@ -23,4 +23,4 @@ jobs:
         SSH_HOST: ${{ secrets.SSH_HOST }}
       run: |
         sshpass -p "$SSH_PASSWORD" ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "cd /var/www/100challenges && git pull"
-        sshpass -p "$SSH_PASSWORD" ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "cd /var/www/100challenges && docker compose down && docker compose --file docker-compose.prod.yaml up -d --build"
+        sshpass -p "$SSH_PASSWORD" ssh -p "$SSH_PORT" -o StrictHostKeyChecking=no "$SSH_USER@$SSH_HOST" "cd /var/www/100challenges && docker compose --file docker-compose.prod.yaml down && docker compose --file docker-compose.prod.yaml up -d --build"
