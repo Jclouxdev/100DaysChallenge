@@ -8,11 +8,11 @@ export default function Root() {
           <div>
             <form id="search-form" role="search">
               <input
-                id="q"
+                id="qinput"
                 aria-label="Search contacts"
                 placeholder="Search"
                 type="search"
-                name="q"
+                name="qinput"
               />
               <div
                 id="search-spinner"
@@ -34,7 +34,7 @@ export default function Root() {
                 <a href={`/001-profile-card`}>Profile Card</a>
               </li>
               <li>
-                <a href={`/contacts/2`}>Add to bag</a>
+                <a href={`/002-add-to-cart`}>Add to bag</a>
               </li>
             </ul>
           </nav>

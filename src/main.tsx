@@ -9,6 +9,7 @@ import './index.css'
 import Root from './routes/root';
 import ErrorPage from './error-page';
 import ProfileCard from './routes/01_ProfileCard/ProfileCard';
+import AddToCart from './routes/02_AddToCart/AddToCart';
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
       {
         path: "/001-profile-card",
         element: <ProfileCard />,
+      },
+      {
+        path: "/002-add-to-cart",
+        element: <AddToCart />,
       }
     ]
   },
