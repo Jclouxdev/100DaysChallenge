@@ -37,10 +37,19 @@ const AddToCart = () => {
         if(filtered.length == 0) {
             setShoppingCartProduct(shoppingCartProduct.concat(productInCart))
         } else {
-            const filtered = shoppingCartProduct.filter((cartProduct) => product.name == cartProduct.name && product.size == cartProduct.size )
-            const reverseFiltered = shoppingCartProduct.filter((cartProduct) => !(product.name == cartProduct.name && product.size == cartProduct.size))
-            filtered[0].quantity++
-            setShoppingCartProduct(reverseFiltered.concat(filtered))
+            const reverseFiltered = shoppingCartProduct.filter(
+                (cartProduct) =>
+                    !(product.name === cartProduct.name && product.size === cartProduct.size)
+            );
+
+            const updatedProduct = {
+                ...filtered[0],
+                quantity: filtered[0].quantity + 1,
+            };
+
+            setShoppingCartProduct(
+                [...reverseFiltered, updatedProduct].sort((a, b) => a.size.localeCompare(b.size))
+            );
         }
     }
 
@@ -49,8 +58,10 @@ const AddToCart = () => {
         const reverseFiltered = shoppingCartProduct.filter((cartProduct) => !(product.name == cartProduct.name && product.size == cartProduct.size))
 
         if(filtered[0].quantity > 1) {
-            filtered[0].quantity--
-            setShoppingCartProduct(reverseFiltered.concat(filtered))
+            const updatedProduct = { ...filtered[0], quantity: filtered[0].quantity - 1 };
+            setShoppingCartProduct(
+                [...reverseFiltered, updatedProduct].sort((a, b) => a.size.localeCompare(b.size))
+            );
         } else {
             setShoppingCartProduct(reverseFiltered)
         }
