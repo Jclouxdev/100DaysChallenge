@@ -1,3 +1,6 @@
+// v1
+//  - Temps de dev : 1d
+
 import { useState } from 'react'
 import tShirt1 from '../../assets/002/shirt-1.webp'
 import tShirt2 from '../../assets/002/shirt-2.webp'

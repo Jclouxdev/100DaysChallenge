@@ -1,3 +1,6 @@
+// v1
+//  - Temps de dev : 0.5d
+
 import profilePic from "../../assets/001/profile-pic.webp"
 import wave1 from "../../assets/001/wave-1.svg"
 import wave2 from "../../assets/001/wave-2.svg"
