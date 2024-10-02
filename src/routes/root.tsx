@@ -4,7 +4,7 @@ export default function Root() {
     return (
       <>
         <div id="sidebar">
-          <h1>100 Days challenges</h1>
+          <h1><a href="https://app.bigdevsoon.me/challenges" target="blank">100 Days challenges</a></h1>
           <div>
             <form id="search-form" role="search">
               <input
@@ -25,7 +25,7 @@ export default function Root() {
               ></div>
             </form>
             <form method="post">
-              <button type="submit">New</button>
+              <button type="submit" id="submit">New</button>
             </form>
           </div>
           <nav>

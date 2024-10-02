@@ -12,6 +12,7 @@ export default function ErrorPage() {
       <p>
         <i>{error.statusText || error.message}</i>
       </p>
+      <a href="/" className="bg-black text-white py-2 px-4 rounded-md mt-6 shadow-xl shadow-[lightgray]">Let me go back to home</a>
     </div>
   );
 }
