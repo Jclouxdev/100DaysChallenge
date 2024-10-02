@@ -1,3 +1,11 @@
+# Following this article
+
+> Info:
+>
+> https://dev.to/bigsondev/100-free-frontend-challenges-3f0?ref=dailydev
+>
+> https://app.bigdevsoon.me/challenges
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
