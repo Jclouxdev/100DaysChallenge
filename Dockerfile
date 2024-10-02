@@ -8,4 +8,4 @@ WORKDIR /usr/src/app
 COPY --from=dependencies /usr/src/app/node_modules ./node_modules
 COPY . .
 RUN npm run build
-CMD ["npm", "run", "preview"]
+CMD ["npm", "run", "preview"] 
