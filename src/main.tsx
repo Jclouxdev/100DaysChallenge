@@ -10,6 +10,7 @@ import Root from './routes/root';
 import ErrorPage from './error-page';
 import ProfileCard from './routes/01_ProfileCard/ProfileCard';
 import AddToCart from './routes/02_AddToCart/AddToCart';
+import MobileNavigation from './routes/03_MobileNavigation/MobileNavigation';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
       {
         path: "/002-add-to-cart",
         element: <AddToCart />,
+      },
+      {
+        path: "/003-mobile-navigation",
+        element: <MobileNavigation />,
       }
     ]
   },
