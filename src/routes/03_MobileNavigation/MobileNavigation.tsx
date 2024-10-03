@@ -1,22 +1,108 @@
 import { useState } from 'react'
 import ProfilePicture from '../../assets/003/profile-pic.webp'
+import PhonePlaceholder from '../../assets/003/apple-iphone-14.png' 
+
+enum Status {
+    online= 'Online',
+    offline= 'Offline',
+    busy= 'Busy',
+    focused= 'Focused'
+}
 
 const MobileNavigation = () => {
     const ACTIVE_STYLE = 'bg-[#F5F8FF] p-2 rounded-full text-[#7A80C8]'
     const INACTIVE_STYLE = 'bg-[transparent] p-2 rounded-full text-gray-300'
     const [mainNavActiveLink, setMainNavActiveLink] = useState<number>(1)
+    const [status, setStatus] = useState<Status>(Status.online)
+    const [modalState, setModalState] = useState<boolean>(false)
+
+    const getStatusColor = (statusLibelle:string) => {
+        if(statusLibelle == 'Online') {
+            return 'bg-green-600'
+        }
+        if(statusLibelle == 'Offline') {
+            return 'bg-gray-700'
+        }
+        if(statusLibelle == 'Busy') {
+            return 'bg-orange-600'
+        }
+        if(statusLibelle == 'Focused') {
+            return 'bg-violet-600'
+        }
+    }
 
     return (
-        <div className="bg-[#E8EBF3] w-full h-full flex items-center justify-center">
-            <div className="card relative bg-white w-[375px] h-[812px] shadow-2xl rounded-[40px] px-6 py-10">
+        <div className="bg-[#E8EBF3] w-full h-full flex items-center justify-center relative">
+            <div className='bg-white rounded-[40px]'>
+            <img
+                src={PhonePlaceholder} 
+                alt="Placeholder" 
+                className='w-[375px] absolute left-1/2 -translate-x-1/2'
+            />
+            <div className="card relative w-[335px] h-[670px] shadow-2xl rounded-[40px] px-6 pb-10 mt-[80px]">
                 <div className="flex flex-row gap-4">
-                    <img 
-                        src={ProfilePicture} 
-                        alt="Profile picture." 
-                        width={64}
-                        height={64}
-                        className='rounded-2xl shadow-xl'
-                    />
+                    <div className='relative'>
+                        <img 
+                            src={ProfilePicture}
+                            alt="Profile picture." 
+                            width={64}
+                            height={64}
+                            className='rounded-2xl shadow-xl'
+                        />
+                        <div 
+                            className={`${getStatusColor(status)} absolute w-4 h-4 rounded-full -bottom-1 -right-1 shadow-md cursor-pointer`}
+                            onClick={() => {setModalState(true)}}
+                        ></div>
+                        {modalState && (
+                        <div className='bg-white shadow-2xl border-[1px] pt-4 pb-6 px-4 mt-2 rounded-md absolute w-[250px]'>
+                            <div className='grid grid-cols-2'>
+                                <p className='font-bold'>Change status</p>
+                                <svg 
+                                    xmlns="http://www.w3.org/2000/svg" 
+                                    fill="none" 
+                                    viewBox="0 0 24 24" 
+                                    strokeWidth={1.5} 
+                                    stroke="currentColor" 
+                                    className="size-5 place-self-end cursor-pointer"
+                                    onClick={() => {setModalState(false)}}
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+                                </svg>
+                            </div>
+                            <hr className='my-4'/>
+                            <ul className='grid gap-2'>
+                                <li 
+                                    className='flex flex-row items-center gap-4 cursor-pointer'
+                                    onClick={() => {setStatus(Status.online)}}
+                                >
+                                    <div className='bg-green-500 w-4 h-4 rounded-full shadow-md'></div>
+                                    <p className=''>{Status.online}</p>
+                                </li>
+                                <li 
+                                    className='flex flex-row items-center gap-4 cursor-pointer'
+                                    onClick={() => {setStatus(Status.offline)}}
+                                >
+                                    <div className='bg-gray-700 w-4 h-4 rounded-full shadow-md'></div>
+                                    <p className=''>{Status.offline}</p>
+                                </li>
+                                <li 
+                                    className='flex flex-row items-center gap-4 cursor-pointer'
+                                    onClick={() => {setStatus(Status.busy)}}
+                                >
+                                    <div className='bg-orange-500 w-4 h-4 rounded-full shadow-md'></div>
+                                    <p className=''>{Status.busy}</p>
+                                </li>
+                                <li 
+                                    className='flex flex-row items-center gap-4 cursor-pointer'
+                                    onClick={() => {setStatus(Status.focused)}}
+                                >
+                                    <div className='bg-violet-500 w-4 h-4 rounded-full shadow-md'></div>
+                                    <p className=''>{Status.focused}</p>
+                                </li>
+                            </ul>
+                        </div>
+                        )}
+                    </div>
                     <div className="flex flex-col justify-center">
                         <h1 className='font-bold'>Lisa Richardson</h1>
                         <p>Environmental meteorologist</p>
@@ -26,7 +112,7 @@ const MobileNavigation = () => {
                 <nav>
                     <ul className='grid gap-4'>
                         <li className='grid grid-cols-2 cursor-pointer'>
-                            <div className='flex flex-row gap-4 items-center'>
+                            <div className='flex flex-row gap-4 items-center w-max'>
                                 <div className='bg-[#E8EBF3] p-2 rounded-md'>
                                     <svg xmlns="http://www.w3.org/2000/svg" 
                                     viewBox="0 0 24 24" 
@@ -227,6 +313,7 @@ const MobileNavigation = () => {
                         </li>
                     </ul>
                 </nav>
+            </div>
             </div>
         </div>
     )
