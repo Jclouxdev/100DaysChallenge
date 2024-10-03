@@ -1,6 +1,8 @@
 import { Outlet } from "react-router-dom";
 
 export default function Root() {
+    const ACTIVE_LINK_STLYE = 'bg-white rounded-md border-[1px] border-blue-200 font-medium'
+
     return (
       <>
         <div id="sidebar">
@@ -30,11 +32,14 @@ export default function Root() {
           </div>
           <nav>
             <ul>
-              <li>
+              <li className={localStorage.getItem('activeLink') == '1' ? ACTIVE_LINK_STLYE : ''} onClick={() => localStorage.setItem('activeLink', '1')}>
                 <a href={`/001-profile-card`}>Profile Card</a>
               </li>
-              <li>
+              <li className={localStorage.getItem('activeLink') == '2' ? ACTIVE_LINK_STLYE : ''} onClick={() => localStorage.setItem('activeLink', '2')}>
                 <a href={`/002-add-to-cart`}>Add to bag</a>
+              </li>
+              <li className={localStorage.getItem('activeLink') == '3' ? ACTIVE_LINK_STLYE : ''} onClick={() => localStorage.setItem('activeLink', '3')}>
+                <a href={`/003-mobile-navigation`}>Mobile navigation</a>
               </li>
             </ul>
           </nav>
