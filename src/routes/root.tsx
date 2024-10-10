@@ -41,10 +41,13 @@ export default function Root() {
               <li className={localStorage.getItem('activeLink') == '3' ? ACTIVE_LINK_STLYE : ''} onClick={() => localStorage.setItem('activeLink', '3')}>
                 <a href={`/003-mobile-navigation`}>Mobile navigation</a>
               </li>
+              <li className={localStorage.getItem('activeLink') == '4' ? ACTIVE_LINK_STLYE : ''} onClick={() => localStorage.setItem('activeLink', '4')}>
+                <a href={`/005-recipe`}>Recipe</a>
+              </li>
             </ul>
           </nav>
         </div>
-        <div id="detail" className="w-full h-full">
+        <div id="detail" className="w-full h-full overflow-y-auto">
           <Outlet />
         </div>
       </>

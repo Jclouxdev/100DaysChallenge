@@ -1,3 +1,6 @@
+// v1
+//  - Temps de dev : 1d
+
 import { useState } from 'react'
 import ProfilePicture from '../../assets/003/profile-pic.webp'
 import PhonePlaceholder from '../../assets/003/apple-iphone-14.png' 

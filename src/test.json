@@ -1,0 +1,151 @@
+{
+    "code": 200,
+    "message": "",
+    "payload": {
+        "typesource": "pTest",
+        "typeptest": 1,
+        "le": "ENG",
+        "title": "Test de niveau",
+        "partid": 3,
+        "part": "comprehension",
+        "sectionid": "C2",
+        "questions": {
+            "total": 4,
+            "data": [
+                {
+                    "id": 222,
+                    "variant": "listening",
+                    "step": "comprehension",
+                    "introduction": "What qualities characterize Canaletto’s style?",
+                    "soundfile": "https://www.lms.7speaking.com/admin/exo/resources/images/2_0_sound_13.mp3",
+                    "options": [
+                        {
+                            "id": 1,
+                            "text": "His work was the first impressionistic representation of Venice",
+                            "iscorrect": false,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos1.png"
+                        },
+                        {
+                            "id": 2,
+                            "text": "He painted extremely complete and precise illustrations of Venice",
+                            "iscorrect": true,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos2.png"
+                        },
+                        {
+                            "id": 3,
+                            "text": "He used the city of Venice as an inspiration for abstract paintings ",
+                            "iscorrect": false,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos3.png"
+                        },
+                        {
+                            "id": 4,
+                            "text": "He introduced an element of romanticism to his paintings of Venice",
+                            "iscorrect": false,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos4.png"
+                        }
+                    ]
+                },
+                {
+                    "id": 223,
+                    "variant": "listening",
+                    "step": "comprehension",
+                    "introduction": "What is said about pesticides in the extract?",
+                    "soundfile": "https://www.lms.7speaking.com/admin/exo/resources/images/2_0_sound_14.mp3",
+                    "options": [
+                        {
+                            "id": 1,
+                            "text": "They will not be prohibited in open fields",
+                            "iscorrect": false,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos1.png"
+                        },
+                        {
+                            "id": 2,
+                            "text": "They will not be prohibited in greenhouses",
+                            "iscorrect": true,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos2.png"
+                        },
+                        {
+                            "id": 3,
+                            "text": "They will be prohibited in greenhouses",
+                            "iscorrect": false,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos3.png"
+                        },
+                        {
+                            "id": 4,
+                            "text": "They will be completely prohibited",
+                            "iscorrect": false,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos4.png"
+                        }
+                    ]
+                },
+                {
+                    "id": 224,
+                    "variant": "listening",
+                    "step": "comprehension",
+                    "introduction": "What will the investigation try to determine? ",
+                    "soundfile": "https://www.lms.7speaking.com/admin/exo/resources/images/2_0_sound_15.mp3",
+                    "options": [
+                        {
+                            "id": 1,
+                            "text": "Whether the captain of the boat had infringed a restriction",
+                            "iscorrect": false,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos1.png"
+                        },
+                        {
+                            "id": 2,
+                            "text": "Whether the boat was carrying too many passengers",
+                            "iscorrect": false,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos2.png"
+                        },
+                        {
+                            "id": 3,
+                            "text": "Whether the captain ignored a warning about the volcano",
+                            "iscorrect": false,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos3.png"
+                        },
+                        {
+                            "id": 4,
+                            "text": "Whether the boat got too close to the volcano",
+                            "iscorrect": true,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos4.png"
+                        }
+                    ]
+                },
+                {
+                    "id": 225,
+                    "variant": "listening",
+                    "step": "comprehension",
+                    "introduction": "Which of the following is NOT true?",
+                    "soundfile": "https://www.lms.7speaking.com/admin/exo/resources/images/2_0_sound_16.mp3",
+                    "options": [
+                        {
+                            "id": 1,
+                            "text": "The stars will gradually be lit up so that the letters will be displayed",
+                            "iscorrect": true,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos1.png"
+                        },
+                        {
+                            "id": 2,
+                            "text": "The stars used in the fireworks will display the letters 'USA'",
+                            "iscorrect": false,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos2.png"
+                        },
+                        {
+                            "id": 3,
+                            "text": "The song 'America the beautiful' will be sung",
+                            "iscorrect": false,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos3.png"
+                        },
+                        {
+                            "id": 4,
+                            "text": "The show has different segments, some of which are 25 minutes long",
+                            "iscorrect": false,
+                            "backgroundurl": "https://www.lms.7speaking.com/admin/exo/picts/pos4.png"
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "status": "success"
+}
