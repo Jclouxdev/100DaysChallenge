@@ -11,6 +11,7 @@ import ErrorPage from './error-page';
 import ProfileCard from './routes/01_ProfileCard/ProfileCard';
 import AddToCart from './routes/02_AddToCart/AddToCart';
 import MobileNavigation from './routes/03_MobileNavigation/MobileNavigation';
+import { Recipe } from './routes/05_Recipe/Recipe';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
       {
         path: "/003-mobile-navigation",
         element: <MobileNavigation />,
+      },
+      {
+        path: "/005-recipe",
+        element: <Recipe />,
       }
     ]
   },
