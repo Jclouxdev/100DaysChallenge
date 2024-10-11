@@ -44,6 +44,9 @@ export default function Root() {
               <li className={localStorage.getItem('activeLink') == '4' ? ACTIVE_LINK_STLYE : ''} onClick={() => localStorage.setItem('activeLink', '4')}>
                 <a href={`/005-recipe`}>Recipe</a>
               </li>
+              <li className={localStorage.getItem('activeLink') == '5' ? ACTIVE_LINK_STLYE : ''} onClick={() => localStorage.setItem('activeLink', '5')}>
+                <a href={`/006-image-carousel`}>Image Carousel</a>
+              </li>
             </ul>
           </nav>
         </div>

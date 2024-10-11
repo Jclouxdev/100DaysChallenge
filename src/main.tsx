@@ -12,6 +12,7 @@ import ProfileCard from './routes/01_ProfileCard/ProfileCard';
 import AddToCart from './routes/02_AddToCart/AddToCart';
 import MobileNavigation from './routes/03_MobileNavigation/MobileNavigation';
 import { Recipe } from './routes/05_Recipe/Recipe';
+import { ImageCarousel } from './routes/06_ImageCarousel/ImageCarousel';
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
       {
         path: "/005-recipe",
         element: <Recipe />,
+      },
+      {
+        path: "/006-image-carousel",
+        element: <ImageCarousel />,
       }
     ]
   },
