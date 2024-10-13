@@ -1,5 +1,5 @@
 import { useEffect, useState, forwardRef } from "react";
-import { FieldError, RegisterOptions, useFormContext } from "react-hook-form";
+import { FieldError, useFormContext } from "react-hook-form";
 
 type InputType =
     | 'button'
