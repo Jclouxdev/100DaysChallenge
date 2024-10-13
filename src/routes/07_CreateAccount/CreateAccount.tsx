@@ -1,3 +1,6 @@
+// Temps : 1d
+// Notes importantes : Pour les formulaires "Nested" il faut utiliser useFormContext() de React-hook-form
+
 import Background from '../../assets/007/bg.png';
 import { FormProvider, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
