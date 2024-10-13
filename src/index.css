@@ -171,10 +171,6 @@ textarea:hover,
     list-style: none;
   }
   
-  #sidebar li {
-    margin: 0.25rem 0;
-  }
-  
   #sidebar nav a {
     display: flex;
     align-items: center;

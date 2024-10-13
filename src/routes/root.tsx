@@ -2,7 +2,8 @@ import { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 
 export default function Root() {
-  const ACTIVE_LINK_STLYE = 'bg-white rounded-md border-[1px] border-blue-200 font-medium'
+  const ACTIVE_LINK_STLYE = 'bg-white rounded-md border-[1px] border-blue-200 font-medium p-2'
+  const DEFAULT_STYLE = ''
   const [screenSize, setScreenSize] = useState(0)
   const [burgerState, setBurgerState] = useState(false)
 
@@ -12,23 +13,23 @@ export default function Root() {
 
   const nav = (
     <nav>
-      <ul>
-        <li className={localStorage.getItem('activeLink') == '1' ? ACTIVE_LINK_STLYE : ''} onClick={() => localStorage.setItem('activeLink', '1')}>
+      <ul className="flex flex-col gap-4 md:gap-0">
+        <li className={localStorage.getItem('activeLink') == '1' ? ACTIVE_LINK_STLYE : DEFAULT_STYLE} onClick={() => localStorage.setItem('activeLink', '1')}>
           <a href={`/001-profile-card`}>Profile Card</a>
         </li>
-        <li className={localStorage.getItem('activeLink') == '2' ? ACTIVE_LINK_STLYE : ''} onClick={() => localStorage.setItem('activeLink', '2')}>
+        <li className={localStorage.getItem('activeLink') == '2' ? ACTIVE_LINK_STLYE : DEFAULT_STYLE} onClick={() => localStorage.setItem('activeLink', '2')}>
           <a href={`/002-add-to-cart`}>Add to bag</a>
         </li>
-        <li className={localStorage.getItem('activeLink') == '3' ? ACTIVE_LINK_STLYE : ''} onClick={() => localStorage.setItem('activeLink', '3')}>
+        <li className={localStorage.getItem('activeLink') == '3' ? ACTIVE_LINK_STLYE : DEFAULT_STYLE} onClick={() => localStorage.setItem('activeLink', '3')}>
           <a href={`/003-mobile-navigation`}>Mobile navigation</a>
         </li>
-        <li className={localStorage.getItem('activeLink') == '4' ? ACTIVE_LINK_STLYE : ''} onClick={() => localStorage.setItem('activeLink', '4')}>
+        <li className={localStorage.getItem('activeLink') == '4' ? ACTIVE_LINK_STLYE : DEFAULT_STYLE} onClick={() => localStorage.setItem('activeLink', '4')}>
           <a href={`/005-recipe`}>Recipe</a>
         </li>
-        <li className={localStorage.getItem('activeLink') == '5' ? ACTIVE_LINK_STLYE : ''} onClick={() => localStorage.setItem('activeLink', '5')}>
+        <li className={localStorage.getItem('activeLink') == '5' ? ACTIVE_LINK_STLYE : DEFAULT_STYLE} onClick={() => localStorage.setItem('activeLink', '5')}>
           <a href={`/006-image-carousel`}>Image Carousel</a>
         </li>
-        <li className={localStorage.getItem('activeLink') == '6' ? ACTIVE_LINK_STLYE : ''} onClick={() => localStorage.setItem('activeLink', '6')}>
+        <li className={localStorage.getItem('activeLink') == '6' ? ACTIVE_LINK_STLYE : DEFAULT_STYLE} onClick={() => localStorage.setItem('activeLink', '6')}>
           <a href={`/006-create-account`}>Create Account</a>
         </li>
       </ul>
@@ -73,7 +74,7 @@ export default function Root() {
   } else {
     return (
       <>
-        <div className={`p-4 top-0 left-0 mt-14 absolute w-2/3 h-screen bg-white shadow-xl shadow-gray-300 z-50 ${burgerState ? '-translate-x-[0%]' : '-translate-x-[110%]'}`}>
+        <div className={`p-4 top-0 left-0 mt-14 absolute w-2/3 h-screen bg-white shadow-xl shadow-gray-300 z-50 transition-transform ${burgerState ? '-translate-x-[0%]' : '-translate-x-[110%]'}`}>
           {nav}
         </div>
         <div className="flex flex-col w-screen">

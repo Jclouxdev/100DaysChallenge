@@ -20,7 +20,7 @@ type CreateAccountFormData = z.infer<typeof creatAccountSchema>;
 export const CreateAccount = () => {
     const methods = useForm<CreateAccountFormData>({
       resolver: zodResolver(creatAccountSchema),
-      mode: 'onChange'
+      mode: 'onTouched'
     })
 
     const onSubmit = (data: CreateAccountFormData) => {
@@ -28,44 +28,96 @@ export const CreateAccount = () => {
         alert('Registred')
     };
 
-  return (
-    <div
-      className="bg-cover w-full h-full px-20 flex items-center"
-      style={{
-        backgroundImage: `url(${Background})`,
-      }}
-    >
-      <FormProvider {...methods} >
-        <form className='flex flex-col gap-4 w-min' onSubmit={methods.handleSubmit(onSubmit)}>
-          <p className='uppercase font-bold text-[#969696]'>Start for free</p>
-          <h1 className='text-5xl font-bold mb-12'>Create new account</h1>
-          <div className='flex flex-row gap-4'>
-              <div>
-                  <Input type='text' id='firstname' name='firstname' icon='id' label='First name' error={methods.formState.errors.firstname}/>
-                  {
-                      methods.formState.errors.firstname &&
-                          <span className={`font-medium ${methods.formState.errors.firstname ? 'text-red-400' : 'text-green-400'} pl-4`}>
-                              {methods.formState.errors.firstname.message}
-                          </span>
-                  }
-              </div>
-              <div>
-                  <Input type='text' id='lastname' name='lastname' icon='id' label='Last name' error={methods.formState.errors.lastname}/>
-                  {methods.formState.errors.lastname && <span className='font-medium text-red-400 pl-4'>{methods.formState.errors.lastname.message}</span>}
-              </div>
-          </div>
-          <div>
-              <Input type='email' id='email' name='email' icon='email' label='Email' error={methods.formState.errors.email}/>
-              {methods.formState.errors.email && <span className='font-medium text-red-400 pl-4'>{methods.formState.errors.email.message}</span>}
-          </div>
-          <div>
-              <Input type='password' id='password' name='password' icon='password' label='Password' error={methods.formState.errors.password}/>
-              {methods.formState.errors.password && <span className='font-medium text-red-400 pl-4'>{methods.formState.errors.password.message}</span>}
-          </div>
-          <p className='text-[#969696] font-medium mb-6'>Already have an account? <a href="" className='font-bold text-[#406AFE]'>Sign in</a></p>
-          <button type='submit' className='bg-[#406AFE] text-white py-3 rounded-3xl shadow-md font-medium shadow-violet-300 hover:bg-[#2843a5] transition-all'>Create account</button>
-        </form>
-      </FormProvider>
-    </div>
-  );
+  // DESKTOP
+  if(screen.width > 640) {
+    return (
+      <div
+        className="bg-cover w-full h-full px-20 flex items-center"
+        style={{
+          backgroundImage: `url(${Background})`,
+        }}
+      >
+        <FormProvider {...methods} >
+          <form className='flex flex-col gap-4 w-min' onSubmit={methods.handleSubmit(onSubmit)}>
+            <p className='uppercase font-bold text-[#969696]'>Start for free</p>
+            <h1 className='text-5xl font-bold mb-12'>Create new account</h1>
+            <div className='flex flex-row gap-4'>
+                <div>
+                    <Input type='text' id='firstname' name='firstname' icon='id' label='First name' error={methods.formState.errors.firstname}/>
+                    {
+                        methods.formState.errors.firstname &&
+                            <span className={`font-medium ${methods.formState.errors.firstname ? 'text-red-400' : 'text-green-400'} pl-4`}>
+                                {methods.formState.errors.firstname.message}
+                            </span>
+                    }
+                </div>
+                <div>
+                    <Input type='text' id='lastname' name='lastname' icon='id' label='Last name' error={methods.formState.errors.lastname}/>
+                    {methods.formState.errors.lastname && <span className='font-medium text-red-400 pl-4'>{methods.formState.errors.lastname.message}</span>}
+                </div>
+            </div>
+            <div>
+                <Input type='email' id='email' name='email' icon='email' label='Email' error={methods.formState.errors.email}/>
+                {methods.formState.errors.email && <span className='font-medium text-red-400 pl-4'>{methods.formState.errors.email.message}</span>}
+            </div>
+            <div>
+                <Input type='password' id='password' name='password' icon='password' label='Password' error={methods.formState.errors.password}/>
+                {methods.formState.errors.password && <span className='font-medium text-red-400 pl-4'>{methods.formState.errors.password.message}</span>}
+            </div>
+            <p className='text-[#969696] font-medium mb-6'>Already have an account? <a href="" className='font-bold text-[#406AFE]'>Sign in</a></p>
+            <button type='submit' className='bg-[#406AFE] text-white py-3 rounded-3xl shadow-md font-medium shadow-violet-300 hover:bg-[#2843a5] transition-all'>Create account</button>
+          </form>
+        </FormProvider>
+      </div>
+    );
+  }
+  // MOBILE
+  else {
+    return (
+      <div
+        className="bg-no-repeat w-full h-full px-8 pt-20 bg-[#F6F6F6]"
+        style={{
+          backgroundImage: `url(${Background})`,
+          backgroundSize: '100%',
+          backgroundPosition: 'bottom',
+          backgroundPositionX: '70px'
+        }}
+      >
+        <FormProvider {...methods} >
+          <form className='flex flex-col gap-4 w-full' onSubmit={methods.handleSubmit(onSubmit)}>
+            <p className='uppercase font-bold text-[#969696]'>Start for free</p>
+            <h1 className='text-5xl font-bold mb-12'>Create new account</h1>
+            <div className='flex flex-col gap-4'>
+                <div>
+                    <Input type='text' id='firstname' name='firstname' icon='id' label='First name' error={methods.formState.errors.firstname}/>
+                    {
+                        methods.formState.errors.firstname &&
+                            <span className={`font-medium ${methods.formState.errors.firstname ? 'text-red-400' : 'text-green-400'} pl-4`}>
+                                {methods.formState.errors.firstname.message}
+                            </span>
+                    }
+                </div>
+                <div>
+                    <Input type='text' id='lastname' name='lastname' icon='id' label='Last name' error={methods.formState.errors.lastname}/>
+                    {methods.formState.errors.lastname && <span className='font-medium text-red-400 pl-4'>{methods.formState.errors.lastname.message}</span>}
+                </div>
+            </div>
+            <div>
+                <Input type='email' id='email' name='email' icon='email' label='Email' error={methods.formState.errors.email}/>
+                {methods.formState.errors.email && <span className='font-medium text-red-400 pl-4'>{methods.formState.errors.email.message}</span>}
+            </div>
+            <div>
+                <Input type='password' id='password' name='password' icon='password' label='Password' error={methods.formState.errors.password}/>
+                {methods.formState.errors.password && <span className='font-medium text-red-400 pl-4'>{methods.formState.errors.password.message}</span>}
+            </div>
+            <p className='text-[#969696] font-medium mb-6'>Already have an account? <a href="" className='font-bold text-[#406AFE]'>Sign in</a></p>
+            <button type='submit' className='bg-[#406AFE] text-white py-3 rounded-3xl shadow-md font-medium shadow-violet-300 hover:bg-[#2843a5] transition-all'>Create account</button>
+          </form>
+        </FormProvider>
+      </div>
+    );
+  }
+
+
+
 };
