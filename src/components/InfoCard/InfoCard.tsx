@@ -18,7 +18,7 @@ export const InfoCard = ({
     }, [])
 
     return (
-        <div className="absolute left-[330px] top-6 z-50 text-black">
+        <div className="absolute left-4 md:left-[330px] top-18 md:top-6 z-50 text-black">
             {!showState ? (
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" 
                 className="size-8 cursor-pointer animate-bounce bg-white p-1 rounded-full text-gray-600 border-[1px] border-gray-200 shadow-md"
