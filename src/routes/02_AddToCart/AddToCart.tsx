@@ -4,6 +4,11 @@
 import { useState } from 'react'
 import tShirt1 from '../../assets/002/shirt-1.webp'
 import tShirt2 from '../../assets/002/shirt-2.webp'
+import { InfoCard, InfoCardContent } from '../../components/InfoCard/InfoCard'
+
+const infoCardContent:InfoCardContent = {
+    devTime: '1 day'
+}
 
 type Product = {
     name: string,
@@ -76,6 +81,7 @@ const AddToCart = () => {
 
     return (
         <div className="bg-[#ffffff] w-full h-full flex items-center justify-center">
+        <InfoCard infoCardContent={infoCardContent}/>
             <div className="flex flex-row gap-8 h-[500px]">
                 <div className='flex flex-col gap-4 slider max-w-[64px]'>
                     <img src={tShirt1} alt="" className='rounded-md border-2 border-blue-400' />

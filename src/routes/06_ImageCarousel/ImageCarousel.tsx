@@ -7,6 +7,12 @@ import Slider4 from '../../assets/006/slider-4.jpg'
 import Slider5 from '../../assets/006/slider-5.jpg'
 import Slider6 from '../../assets/006/slider-6.jpg'
 import Carousel from "./Carousel/Carousel"
+import { InfoCard, InfoCardContent } from "../../components/InfoCard/InfoCard"
+
+const infoCardContent:InfoCardContent = {
+    devTime: '1 day',
+    notes: 'Images are not optimized, and responsive is not greatly done.'
+}
 
 export const ImageCarousel = () => {
     const [images, setImages] = useState<string[]>()
@@ -24,6 +30,7 @@ export const ImageCarousel = () => {
 
     return (
         <div className="bg-[#0C0C0C] w-full h-full justify-center text-gray-50 p-12 gap-8">
+            <InfoCard infoCardContent={infoCardContent}/>
             <Carousel images={images!}/>
         </div>
     )

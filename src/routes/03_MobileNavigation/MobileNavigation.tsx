@@ -4,6 +4,11 @@
 import { useState } from 'react'
 import ProfilePicture from '../../assets/003/profile-pic.webp'
 import PhonePlaceholder from '../../assets/003/apple-iphone-14.png' 
+import { InfoCard, InfoCardContent } from '../../components/InfoCard/InfoCard'
+
+const infoCardContent:InfoCardContent = {
+    devTime: '0.5 day'
+}
 
 enum Status {
     online= 'Online',
@@ -36,11 +41,12 @@ const MobileNavigation = () => {
 
     return (
         <div className="bg-[#E8EBF3] w-full h-full flex items-center justify-center relative">
+            <InfoCard infoCardContent={infoCardContent}/>
             <div className='bg-white rounded-[40px]'>
             <img
                 src={PhonePlaceholder} 
                 alt="Placeholder" 
-                className='w-[375px] absolute left-1/2 -translate-x-1/2'
+                className='w-[375px] absolute left-1/2 -translate-x-1/2 z-0'
             />
             <div className="card relative w-[335px] h-[670px] shadow-2xl rounded-[40px] px-6 pb-10 mt-[80px]">
                 <div className="flex flex-row gap-4">

@@ -1,5 +1,10 @@
 import { useMemo, useState } from 'react'
 import CoffeLatte from '../../assets/005/iced_coffe_1920.webp' 
+import { InfoCard, InfoCardContent } from '../../components/InfoCard/InfoCard'
+
+const infoCardContent:InfoCardContent = {
+    devTime: '0.5 day'
+}
 
 const DEFAULT_SHOPLIST_DATA:ShoplistItems[] = [
     {
@@ -64,6 +69,7 @@ export const Recipe = () => {
 
     return (
         <div className="flex md:flex-col xl:flex-row">
+            <InfoCard infoCardContent={infoCardContent}/>
             <div className='md:w-full xl:w-[40%] md:h-auto xl:h-screen'>
                 <img 
                     src={CoffeLatte}

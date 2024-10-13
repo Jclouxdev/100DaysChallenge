@@ -10,10 +10,16 @@ import logoLinkedin from "../../assets/001/logo-linkedin.svg"
 import logoTwitter from "../../assets/001/logo-twitter.svg"
 import logoInstagram from "../../assets/001/logo-instagram.svg"
 import logoBaskter from "../../assets/001/basketball-outline.svg"
+import { InfoCard, InfoCardContent } from "../../components/InfoCard/InfoCard"
+
+const infoCardContent:InfoCardContent = {
+    devTime: '0.5 day'
+}
 
 const ProfileCard = () => {
     return (
         <div className="bg-[#F0F3C0] w-full h-full flex items-center justify-center">
+            <InfoCard infoCardContent={infoCardContent}/>
             <div id="card" className="card bg-white max-w-[400px] rounded-[50px] relative overflow-hidden shadow-xl">
                 <div className="card__header p-6 bg-[#983250] w-full">
                     <img src={profilePic} alt="Profile picture." className="relative z-30 max-w-32 rounded-full m-auto shadow-2xl" />

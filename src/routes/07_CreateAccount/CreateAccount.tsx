@@ -6,6 +6,7 @@ import { FormProvider, useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { z } from 'zod';
 import { Input } from './Input';
+import { InfoCard, InfoCardContent } from '../../components/InfoCard/InfoCard';
 
 const creatAccountSchema = z.object({
     firstname: z.string().min(4, 'At least 4 caracters'),
@@ -13,6 +14,12 @@ const creatAccountSchema = z.object({
     email: z.string().email('Invalid email').min(1, 'Email is required'),
     password: z.string().min(8, 'Must be at least 8 caracters'),
 })
+
+const infoCardContent:InfoCardContent = {
+  devTime: '1 day',
+  notes: 'For the "Nested" forms, use useFormContext hook from react-hook-form.',
+  librairies: ['zod', 'react-hook-form']
+}
 
 // Typage des données du formulaire
 type CreateAccountFormData = z.infer<typeof creatAccountSchema>;
@@ -37,6 +44,7 @@ export const CreateAccount = () => {
           backgroundImage: `url(${Background})`,
         }}
       >
+        <InfoCard infoCardContent={infoCardContent}/>
         <FormProvider {...methods} >
           <form className='flex flex-col gap-4 w-min' onSubmit={methods.handleSubmit(onSubmit)}>
             <p className='uppercase font-bold text-[#969696]'>Start for free</p>
@@ -83,6 +91,7 @@ export const CreateAccount = () => {
           backgroundPositionX: '70px'
         }}
       >
+        <InfoCard infoCardContent={infoCardContent}/>
         <FormProvider {...methods} >
           <form className='flex flex-col gap-4 w-full' onSubmit={methods.handleSubmit(onSubmit)}>
             <p className='uppercase font-bold text-[#969696]'>Start for free</p>
