@@ -9,7 +9,6 @@ interface ModalProps extends MusicEventType {
 
 export const Modal = ({
   title,
-  description,
   availablePlaces,
   id,
   setModalState,
