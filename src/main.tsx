@@ -14,6 +14,7 @@ import MobileNavigation from './routes/03_MobileNavigation/MobileNavigation';
 import { Recipe } from './routes/05_Recipe/Recipe';
 import { ImageCarousel } from './routes/06_ImageCarousel/ImageCarousel';
 import { CreateAccount } from './routes/07_CreateAccount/CreateAccount';
+import { MusicEvent } from './routes/08_MusicEvent/MusicEvent';
 
 const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
       {
         path: "/006-create-account",
         element: <CreateAccount />,
+      },
+      {
+        path: "/007-music-event",
+        element: <MusicEvent />,
       }
     ]
   },
