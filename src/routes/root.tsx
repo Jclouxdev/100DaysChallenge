@@ -32,6 +32,9 @@ export default function Root() {
         <li className={localStorage.getItem('activeLink') == '6' ? ACTIVE_LINK_STLYE : DEFAULT_STYLE} onClick={() => localStorage.setItem('activeLink', '6')}>
           <a href={`/006-create-account`}>Create Account</a>
         </li>
+        <li className={localStorage.getItem('activeLink') == '7' ? ACTIVE_LINK_STLYE : DEFAULT_STYLE} onClick={() => localStorage.setItem('activeLink', '7')}>
+          <a href={`/007-music-event`}>Music Event</a>
+        </li>
       </ul>
     </nav>
   )
@@ -78,7 +81,7 @@ export default function Root() {
           {nav}
         </div>
         <div className="flex flex-col w-screen">
-          <div className="bg-gray-100 fixed w-screen h-14 border-b-[1px] p-4 grid grid-cols-2">
+          <div className="bg-gray-100 fixed z-50 w-screen h-14 border-b-[1px] p-4 grid grid-cols-2">
             {!burgerState && (
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                 className="size-6 cursor-pointer"
