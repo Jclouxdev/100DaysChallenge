@@ -35,6 +35,9 @@ export default function Root() {
         <li className={localStorage.getItem('activeLink') == '7' ? ACTIVE_LINK_STLYE : DEFAULT_STYLE} onClick={() => localStorage.setItem('activeLink', '7')}>
           <a href={`/007-music-event`}>Music Event</a>
         </li>
+        <li className={localStorage.getItem('activeLink') == '8' ? ACTIVE_LINK_STLYE : DEFAULT_STYLE} onClick={() => localStorage.setItem('activeLink', '8')}>
+          <a href={`/009-password-generator`}>Password Generator</a>
+        </li>
       </ul>
     </nav>
   )

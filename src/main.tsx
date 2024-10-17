@@ -15,6 +15,7 @@ import { Recipe } from './routes/05_Recipe/Recipe';
 import { ImageCarousel } from './routes/06_ImageCarousel/ImageCarousel';
 import { CreateAccount } from './routes/07_CreateAccount/CreateAccount';
 import { MusicEvent } from './routes/08_MusicEvent/MusicEvent';
+import { PasswordGenerator } from './routes/09_PasswordGenerator/PasswordGenerator';
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,10 @@ const router = createBrowserRouter([
       {
         path: "/007-music-event",
         element: <MusicEvent />,
+      },
+      {
+        path: "/009-password-generator",
+        element: <PasswordGenerator />,
       }
     ]
   },
