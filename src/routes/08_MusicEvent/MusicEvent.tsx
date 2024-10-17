@@ -1,3 +1,5 @@
+// 1 day of dev
+
 import { useMemo, useState } from "react"
 import { MusicEventType } from "./types/MusicEvent"
 import { musicEventData } from "./Data"
