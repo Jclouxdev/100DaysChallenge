@@ -29,9 +29,9 @@ export const PasswordGenerator = () => {
     }, [optionLower, optionNumber, optionSymbol, optionUpper, passwordLenght])
     
     return (
-        <div className="bg-[#F7E7FF] w-full h-full relative md:flex md:items-center md:justify-center">
+        <div className="bg-[#F7E7FF] w-full h-full overflow-y-hidden relative md:flex md:items-center md:justify-center">
             <Notification state={notificationState} content={"Content copied to clipboard!"}/>
-            <div className="bg-[#090212] w-full p-0 md:w-96 h-full md:h-min pt-20 md:pt-auto md:p-6 md:rounded-xl text-[#F7E7FF] px-6 flex flex-col gap-8">
+            <div className="bg-[#090212] w-full p-0 md:w-96 h-full overflow-y-hidden md:h-min pt-20 md:pt-auto md:p-6 md:rounded-xl text-[#F7E7FF] px-6 flex flex-col gap-8">
                 <h1 className="font-medium text-2xl">Generate password</h1>
                 <div className="grid gap-2">
                     <p className="uppercase text-[#87808E] text-xs">Generated password</p>
