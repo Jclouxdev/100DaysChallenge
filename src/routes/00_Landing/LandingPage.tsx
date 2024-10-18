@@ -15,20 +15,20 @@ export const LandingPage = () => {
 
     return (
         <div className="bg-[#F7F7F7] w-full h-full relative">
-            <section id="hero" className="w-full md:w-[680px] mx-auto h-screen flex flex-col justify-center md:justify-normal md:pt-40 md:items-start -mt-20 md:mt-0 px-6 gap-6">
+            <section id="hero" className="w-full md:w-[680px] mx-auto h-screen flex flex-col justify-center md:justify-normal md:pt-40 md:items-start px-6 gap-6">
                 <h1 className="text-3xl font-montserat font-bold z-10">Je releve un défi de 100 jours pour devenir un expert du développement <strong className='text-[#2F8ED0]'>front-end</strong> !</h1>
                 <p className='text-gray-400 font-light z-10'>Mon objectif est d'améliorer mes compétences en front-end en me lançant dans un challenge quotidien pendant 100 jours</p>
                 <button onClick={handleScrollToAbout} className="bg-[#2F8ED0] text-white py-3 px-6 rounded font-bold z-10">
                     En apprendre plus sur ce défi
                 </button>
+                <img src={WaveBg} alt="" className='absolute bottom-20 md:bottom-0 left-0 z-0' />
             </section>
-            <section className='-mt-[100px] pt-40 md:pt-20 pb-12 px-6 md:px-32 text-[#F7F7F7]'
+            <section className='pb-12 px-6 md:px-32 text-[#F7F7F7] -translate-y-20'
                 style={{
                     background:'rgb(0,29,112) linear-gradient(180deg, rgba(0,29,112,1) 0%, rgba(0,12,46,1) 100%)',
                 }}
             >
-                <img src={WaveBg} alt="" className='absolute bottom-20 md:bottom-0 left-0 z-0' />
-                <h2 id="about" className="text-xl font-bold font-montserat mb-4 mt-20">Pourquoi ai-je décidé de relever ce défi de 100 jours ?</h2>
+                <h2 id="about" className="text-xl font-bold font-montserat mb-4 pt-40">Pourquoi ai-je décidé de relever ce défi de 100 jours ?</h2>
                 <p className='font-light'>J'ai choisi de consacrer 100 jours à ce défi pour me focaliser sur le développement front-end et acquérir des habitudes et réflexes solides. En codant quotidiennement, je compte repousser mes limites, créer des composants modernes et cohérents, et construire un portfolio qui reflète mes compétences actuelles</p>
                 <div className='grid gap-4 mt-4'>
                     <span className='flex gap-2 items-center text-[#2F8ED0]'>
@@ -97,7 +97,7 @@ export const LandingPage = () => {
                     </div>
                 </div>
             </section>
-            <footer className='bg-[#000616] text-[#616779] flex w-full justify-evenly p-4'>
+            <footer className='bg-[#000616] text-[#616779] flex w-full justify-evenly p-4 -translate-y-20'>
                 <p>© Jclouxdev</p>
                 <a href="https://github.com/Jclouxdev" className='flex gap-2'>
                     <svg className="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" viewBox="0 0 24 24">
