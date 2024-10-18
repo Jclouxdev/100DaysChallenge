@@ -83,7 +83,7 @@ const AddToCart = () => {
         <div className="bg-[#ffffff] w-full h-full flex items-center justify-center">
         <InfoCard infoCardContent={infoCardContent}/>
             <div className="flex flex-row gap-8 h-[500px]">
-                <div className='flex flex-col gap-4 slider max-w-[64px]'>
+                <div className='flex flex-col gap-4 max-w-[64px]'>
                     <img src={tShirt1} alt="" className='rounded-md border-2 border-blue-400' />
                     <img src={tShirt2} alt="" className='rounded-md' />
                 </div>
