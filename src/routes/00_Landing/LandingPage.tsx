@@ -20,13 +20,14 @@ export const LandingPage = () => {
                 <p className='text-gray-400 font-light z-10'>Mon objectif est d'améliorer mes compétences en front-end en me lançant dans un challenge quotidien pendant 100 jours</p>
                 <button onClick={handleScrollToAbout} className="bg-[#2F8ED0] text-white py-3 px-6 rounded font-bold z-10">
                     En apprendre plus sur ce défi
-                </button>                <img src={WaveBg} alt="" className='absolute bottom-20 left-0 z-0' />
+                </button>
             </section>
-            <section className='-mt-20 pt-40 md:pt-20 pb-12 px-6 md:px-32 text-[#F7F7F7]'
+            <section className='-mt-[100px] pt-40 md:pt-20 pb-12 px-6 md:px-32 text-[#F7F7F7]'
                 style={{
                     background:'rgb(0,29,112) linear-gradient(180deg, rgba(0,29,112,1) 0%, rgba(0,12,46,1) 100%)',
                 }}
             >
+                <img src={WaveBg} alt="" className='absolute bottom-20 md:bottom-0 left-0 z-0' />
                 <h2 id="about" className="text-xl font-bold font-montserat mb-4 mt-20">Pourquoi ai-je décidé de relever ce défi de 100 jours ?</h2>
                 <p className='font-light'>J'ai choisi de consacrer 100 jours à ce défi pour me focaliser sur le développement front-end et acquérir des habitudes et réflexes solides. En codant quotidiennement, je compte repousser mes limites, créer des composants modernes et cohérents, et construire un portfolio qui reflète mes compétences actuelles</p>
                 <div className='grid gap-4 mt-4'>
