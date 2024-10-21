@@ -17,6 +17,7 @@ import { CreateAccount } from './routes/07_CreateAccount/CreateAccount';
 import { MusicEvent } from './routes/08_MusicEvent/MusicEvent';
 import { PasswordGenerator } from './routes/09_PasswordGenerator/PasswordGenerator';
 import { LandingPage } from './routes/00_Landing/LandingPage';
+import { HotelBooking } from './routes/11_HotelBooking/HotelBooking';
 
 const router = createBrowserRouter([
   {
@@ -59,6 +60,10 @@ const router = createBrowserRouter([
       {
         path: "/009-password-generator",
         element: <PasswordGenerator />,
+      },
+      {
+        path: "/011-hotel-booking",
+        element: <HotelBooking />,
       }
     ]
   },
